@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+</head>
+<body class="min-h-screen bg-salmon p-4">
+    <button id="volverBtn" class="mb-4 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <a href="https://2715182-libreria-sabiduria.websrd.com/">Volver</a>
+    </button>
+    
+    <div class="mb-4 flex flex-wrap gap-4">
+        <input type="text" id="buscador" placeholder="Buscar por nombre..." class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <select id="filtroCategoria" class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Todas las categorías</option>
+            <!-- Las categorías se agregarán dinámicamente aquí -->
+        </select>
+    </div>
+
+    <div id="galeriaLibros" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Los libros se insertarán aquí dinámicamente -->
+    </div>
+
+    <div id="modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="modal-content bg-white rounded-lg p-6 max-w-2xl w-full relative">
+            <button id="cerrarModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <h2 id="modalTitulo" class="text-2xl font-bold mb-4"></h2>
+            <img id="modalImagen" src="" alt="" class="w-full h-64 object-cover mb-4 rounded">
+            <p id="modalDescripcion" class="text-gray-600 mb-4"></p>
+            <p id="modalCategoria" class="text-sm font-semibold mb-2"></p>
+            <div id="modalPrecios" class="mb-4">
+                <!-- Los precios se insertarán aquí dinámicamente -->
+            </div>
+            <a id="comprarAhoraBtn" href="#" target="_blank" class="inline-block px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                Comprar ahora
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
